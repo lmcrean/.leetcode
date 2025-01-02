@@ -4,11 +4,14 @@
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    filteredArr=[]
-    for(i=0;i<arr.length;i++) {
+    let newArr = new Array
+    for(let i=0;i<arr.length;i++){
         if (fn(arr[i],i)) {
-            filteredArr.push(arr[i])
-        }
+            newArr.push(arr[i])
+            console.log("newArr loop",newArr)
+        } else
+        console.log(fn(arr[i],i))
+        console.log(newArr)
     }
-    return filteredArr
+    return newArr
 };
